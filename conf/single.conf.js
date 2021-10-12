@@ -9,9 +9,12 @@ exports.config = {
   exclude: [],
 
   capabilities: [{
-    browserName: 'Chrome',
+    os_version : "14",
+    device : "iPhone 12",
+    real_mobile : "true",
+    browserName : "iPhone",
     name: 'single_test',
-    build: 'browserstack-build-1'
+    build: process.env.BROWSERSTACK_BUILD_NAME || 'browserstack-build-1'
   }],
 
   logLevel: 'warn',
